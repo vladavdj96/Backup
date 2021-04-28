@@ -18,7 +18,7 @@ def backup():
             continue
 
         # Izbegaba se zipovanje backup-a
-        if fajl == "backup.zip" or fajl == 'listafajlova.txt':
+        if fajl == "backup.zip" or fajl == 'listafajlova.txt' or fajl == 'PodignutiFajlovi':
             continue
 
         # Zipuje se fajl u folderu
@@ -39,5 +39,6 @@ def formiranje_liste(fajl):
 def brisanje(fajl):
     # Fajl se salje u trashcan
     send2trash.send2trash(fajl)
+
 
 backup()
